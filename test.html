@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <style>
+
+
+ 
+   
+    .mod{
+      width: 100%;
+      position:fixed ;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0,0,0,0.7);
+      background-size: cover;
+      visibility: hidden;
+      opacity: o;
+      transition: visibility 0s , opacity 0.5s;
+     
+    }
+
+    .mod-active{
+      visibility: visible;
+      opacity: 1;
+
+    }
+    .modal{
+      position:fixed ;
+      margin-top: 12%;
+      border-radius: 30px;
+      justify-content: center;
+      background-color: hsl(218, 39%, 27%);
+      height: 400px;
+      width: 400px;
+      text-align: center;
+      margin-left: 440px;
+     
+
+    }
+
+    a.link-modal{
+      
+      text-decoration: none;
+      color: white;
+      
+
+    }
+    h1.modal-titre{
+      margin-top: 90px;
+      
+    }
+    label.modal-text-link{
+      background-color: #032671;
+      font-size: 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      
+    }
+    .modal label:hover{
+      transition: 0.4s;
+      background-color: rgb(60, 60, 215);
+    }
+    .modal span{
+      font-size: 25px;
+      font-family:'Times New Roman', Times, serif;
+      margin-left: 340px;
+      margin-top: 40px;
+      cursor: pointer;
+      font-weight: bold;
+      
+    }
+
+    .modal {
+      color: white;
+    }
+    .modal span:hover{
+      color: red;
+      transition: 0.4s;
+    }
+  </style>
+  <button class="botom" >click</button>
+  <button class="botom" >click</button>
+  
+
+<div class="mod" id="mod">
+
+  <div  class="modal">
+ <br>
+<span class="modal-close" >X</span>
+    <br><br><br>
+    <h1>Avertissement </h1><br>
+    <h3 class="modal-titre">Pour Lancer un telechargement </h3>
+    <h3>  veuillez dabord vous identifier</h3><br><br><br>
+    <a class="link-modal" href="./inscription/inscription.css"> <label class="modal-text-link">&nbsp &nbsp Se Connecter &nbsp &nbsp </label></a>
+  </div>
+</div>
+
+<Script>
+
+var bt=document.querySelectorAll(".botom");
+var modal=document.querySelector(".mod");
+var cl=document.querySelector(".modal-close");
+
+bt[0].addEventListener('click' , function (){
+  modal.classList.add('mod-active');
+
+
+} );
+bt[1].addEventListener('click' , function (){
+  modal.classList.add('mod-active');
+
+
+} );
+cl.addEventListener('click' , function(){
+  modal.classList.remove('mod-active');
+
+} );
+  
+</Script>
+
+</body>
+</html>
